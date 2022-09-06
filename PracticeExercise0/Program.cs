@@ -102,8 +102,19 @@ namespace PracticeExcercise0
         // #4
         public static bool IsNeilNumber(int i)
         {
-            return true;
+            int num, temp, sum = 0, rem;
+            num = i;
+            temp = i;
+            while (num > 0)
+            {
+                rem = num % 10;
+                sum = sum + rem * rem * rem;
+                num = num / 10;
+            }
+            if (temp == sum) { return true; }
+            else { return false; }
         }
+
 
     }
 }
